@@ -1,10 +1,10 @@
--- Q1
+-- Q.1
 select max(distance), flight from flights
 group by flight
 order by max(distance) desc limit 1;
 
 
--- Q2
+-- Q.2
 
 select distinct(engines) from planes;
 
@@ -13,27 +13,27 @@ where (select max(distinct(engines)) from planes)
 group by engines;
 
     
--- Q3
+-- Q.3
 select count(*) from flights  ;
 
--- Q4
+-- Q.4
 select count(*), carrier from flights  
 group by carrier;
 
--- Q5
+-- Q.5
 select flight, carrier from flights  
 order by flight desc;
 
--- Q6
+-- Q.6
 
 select flight, carrier from flights  
 order by flight desc limit 5;
 
--- Q7
+-- Q.7
 select flight, carrier, distance from flights where distance >= 1000
 order by flight desc;
 
--- Q8
+-- Q.8
 
 -- calculate the average distance travel by an aircraft(carrier name)
 select avg(distance), carrier from flights
